@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bluetooth test</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>ESP32 BLE Test</h1>
+      <div class="flex-container">
+        <div>
+          <h3>Device info</h3>
+          <div class="upper-container card">
+            <div class="device-info-container">
+              <span class="device-info-label">Model Number:</span>
+              <span id="model-number"></span>
+              <span class="device-info-label">Firmware Revision:</span>
+              <span id="firmware-revision"></span>
+              <span class="device-info-label">Hardware Revision:</span>
+              <span id="hardware-revision"></span>
+              <span class="device-info-label">Software Revision:</span>
+              <span id="software-revision"></span>
+              <span class="device-info-label">Manufacturer Name:</span>
+              <span id="manufacturer-name"></span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3>Analog reading</h3>
+          <div class="lower-container card">
+            <span class="reading-label">Value:</span>
+            <span id="reading"></span>
+            <div id="reading-bar"></div>
+          </div>
+        </div>
+      </div>
+      <button id="btn">Connect</button>
+    </div>
+  </body>
+</html>

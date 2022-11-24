@@ -1,0 +1,10 @@
+{
+  "liveServer.settings.root": "/",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.https": {
+    "enable": false,
+    "cert": "D:\\localhost_https\\localhost.pem",
+    "key": "D:\\localhost_https\\localhost.key",
+    "passphrase": "ivan"
+  }
+}
