@@ -147,7 +147,7 @@ const connectButton = document.getElementById("btn");
 connectButton.addEventListener("click", handleConnection);
 connectButton.className = "btn-blue";
 
-function handleNotifications(event) {
+const handleNotifications = (event) => {
   let value = event.target.value;
   let intValue = swap32(value.getUint32());
   let scaledValue = scale(intValue, 0, 4095, 0, 512);
@@ -162,26 +162,26 @@ function handleNotifications(event) {
   } else {
     readingBar.className = "reading-bar-red";
   }
-}
+};
 
-function onDisconnected(event) {
+const onDisconnected = (event) => {
   const device = event.target;
   console.log(`Device ${device.name} is disconnected.`);
   currentDevice = null;
   connectButton.innerHTML = "Connect";
-}
+};
 
 // https://stackoverflow.com/a/5320624
-function swap32(val) {
+const swap32 = (val) => {
   return (
     ((val & 0xff) << 24) | ((val & 0xff00) << 8) | ((val >> 8) & 0xff00) | ((val >> 24) & 0xff)
   );
-}
+};
 
-function scale(number, inMin, inMax, outMin, outMax) {
+const scale = (number, inMin, inMax, outMin, outMax) => {
   return ((number - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
-}
+};
 
-function padHex(value) {
+const padHex = (value) => {
   return ("00" + value.toString(16).toUpperCase()).slice(-2);
-}
+};
