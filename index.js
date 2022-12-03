@@ -151,6 +151,10 @@ const handleNotifications = (event) => {
   let value = event.target.value;
   let intValue = swap32(value.getUint32());
   let scaledValue = scale(intValue, 0, 4095, 0, 512);
+  console.log(intValue.toString());
+
+  sendMQTTMessage(scaledValue.toString());
+
   reading.innerHTML = intValue;
   readingBar.style.width = `${scaledValue}px`;
 
